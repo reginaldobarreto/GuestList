@@ -12,12 +12,17 @@
     <include layout="@layout/toolbar" />
 
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:headerLayout="@layout/header"
         android:layout_gravity="start"
-        app:menu="@menu/menu"
-        android:id="@+id/navigation_view"/>
+        app:menu="@menu/menu" />
+
+    <include
+        layout="@layout/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 
 </androidx.drawerlayout.widget.DrawerLayout>
