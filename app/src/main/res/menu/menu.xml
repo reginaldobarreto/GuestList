@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/menu_guest"
+        android:icon="@drawable/ic_action_guest"
+        android:title="@string/txt_convidados"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_present"
+        android:icon="@drawable/ic_action_present"
+        android:title="@string/txt_presentes"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_absent"
+        android:icon="@drawable/ic_action_absent"
+        android:title="@string/txt_ausentes"
+        app:showAsAction="always" />
 </menu>

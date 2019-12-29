@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Guest List</string>
+    <string name="txt_convidados">Convidados</string>
+    <string name="txt_presentes">Presentes</string>
+    <string name="txt_ausentes">Ausentes</string>
 </resources>
