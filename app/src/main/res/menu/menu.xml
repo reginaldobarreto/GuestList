@@ -4,17 +4,17 @@
 
     <item
         android:id="@+id/menu_guest"
-        android:icon="@drawable/ic_action_guest"
+        android:icon="@android:drawable/ic_input_add"
         android:title="@string/txt_convidados"
         app:showAsAction="always" />
     <item
         android:id="@+id/menu_present"
-        android:icon="@drawable/ic_action_present"
+        android:icon="@android:drawable/presence_online"
         android:title="@string/txt_presentes"
         app:showAsAction="always" />
     <item
         android:id="@+id/menu_absent"
-        android:icon="@drawable/ic_action_absent"
+        android:icon="@android:drawable/presence_busy"
         android:title="@string/txt_ausentes"
         app:showAsAction="always" />
 </menu>
