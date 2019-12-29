@@ -4,17 +4,14 @@
 
     <item
         android:id="@+id/menu_guest"
-        android:icon="@android:drawable/ic_input_add"
-        android:title="@string/txt_convidados"
-        app:showAsAction="always" />
+        android:icon="@drawable/invite"
+        android:title="@string/txt_convidados" />
     <item
         android:id="@+id/menu_present"
-        android:icon="@android:drawable/presence_online"
-        android:title="@string/txt_presentes"
-        app:showAsAction="always" />
+        android:icon="@drawable/present"
+        android:title="@string/txt_presentes" />
     <item
         android:id="@+id/menu_absent"
-        android:icon="@android:drawable/presence_busy"
-        android:title="@string/txt_ausentes"
-        app:showAsAction="always" />
+        android:icon="@drawable/absent"
+        android:title="@string/txt_ausentes" />
 </menu>
