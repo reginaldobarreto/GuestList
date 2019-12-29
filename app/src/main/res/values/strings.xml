@@ -4,4 +4,6 @@
     <string name="txt_presentes">Presentes</string>
     <string name="txt_ausentes">Ausentes</string>
     <string name="header_meus_convidados">Meus Convidados</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>
