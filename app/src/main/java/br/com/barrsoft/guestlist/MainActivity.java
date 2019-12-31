@@ -6,18 +6,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import br.com.barrsoft.guestlist.fragments.AbsentFragment;
+import br.com.barrsoft.guestlist.fragments.GuestFragment;
+import br.com.barrsoft.guestlist.fragments.PresentFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
-
 
     @BindView(R.id.navigation_view)
     NavigationView navigationView;
@@ -41,27 +46,41 @@ public class MainActivity extends AppCompatActivity {
         drawerToggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()){
 
+                Fragment fragment = null;
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+                switch (menuItem.getItemId()){
                     case R.id.menu_guest:
-                        Toast.makeText(getApplicationContext(),menuItem.getTitle(),Toast.LENGTH_LONG).show();
+                        fragment = new GuestFragment();
                         break;
                     case R.id.menu_present:
-                        Toast.makeText(getApplicationContext(),menuItem.getTitle(),Toast.LENGTH_LONG).show();
+                        fragment = new PresentFragment();
                         break;
                     case R.id.menu_absent:
-                        Toast.makeText(getApplicationContext(),menuItem.getTitle(),Toast.LENGTH_LONG).show();
+                        fragment = new AbsentFragment();
                         break;
-                        default:
-                            return false;
+                    default:
+                        return false;
                 }
+                transaction.replace(R.id.content_frame, fragment);
+                transaction.commit();
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
             }
         });
+    }
 
+    @Override
+    public void onBackPressed() {
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }else{
+            super.onBackPressed();
+        }
     }
 
     @OnClick(R.id.floatingActionButton)
@@ -86,4 +105,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }
