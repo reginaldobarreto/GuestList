@@ -1,4 +1,4 @@
-package br.com.barrsoft.guestlist;
+package br.com.barrsoft.guestlist.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -15,6 +15,8 @@ import android.view.MenuItem;
 import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+
+import br.com.barrsoft.guestlist.R;
 import br.com.barrsoft.guestlist.fragments.AbsentFragment;
 import br.com.barrsoft.guestlist.fragments.GuestFragment;
 import br.com.barrsoft.guestlist.fragments.PresentFragment;
