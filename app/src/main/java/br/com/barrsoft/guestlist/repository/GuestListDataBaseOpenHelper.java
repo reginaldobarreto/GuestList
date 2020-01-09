@@ -19,9 +19,7 @@ public class GuestListDataBaseOpenHelper extends SQLiteOpenHelper {
     private  static final String SQL_DROP_TABLE =
             "DROP TABLE IF EXISTS " + GuestListConstants.TABLE_NAME.TABLE_NAME;
 
-
-
-    public GuestListDataBaseOpenHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    public GuestListDataBaseOpenHelper(Context context) {
         super(context, NAME, null, VERSION);
     }
 
